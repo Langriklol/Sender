@@ -1,0 +1,124 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "d6ece186fe0a0a060779c446a64bd23a58bba311"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Sender/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.1",
+          "System.IO.Ports": "4.4.0-preview2-25405-01"
+        },
+        "runtime": {
+          "Sender.dll": {}
+        }
+      },
+      "Microsoft.Win32.Registry/4.4.0-preview2-25405-01": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.4.0-preview2-25405-01",
+          "System.Security.Principal.Windows": "4.4.0-preview2-25405-01"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "Newtonsoft.Json/11.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "System.IO.Ports/4.4.0-preview2-25405-01": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.4.0-preview2-25405-01"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.Ports.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.IO.Ports.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.AccessControl/4.4.0-preview2-25405-01": {
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.4.0-preview2-25405-01"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/4.4.0-preview2-25405-01": {
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sender/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Win32.Registry/4.4.0-preview2-25405-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UqIUdoXwhmgPaxFCts0cIGB1mDSFyDE6h2j597c+nBWuloxaOSs4zwEnR/RB3qBIyJdATC8OrSjyhQh1hUHfUQ==",
+      "path": "microsoft.win32.registry/4.4.0-preview2-25405-01",
+      "hashPath": "microsoft.win32.registry.4.4.0-preview2-25405-01.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pNN4l+J6LlpIvHOeNdXlwxv39NPJ2B5klz+Rd2UQZIx30Squ5oND1Yy3wEAUoKn0GPUj6Yxt9lxlYWQqfZcvKg==",
+      "path": "newtonsoft.json/11.0.1",
+      "hashPath": "newtonsoft.json.11.0.1.nupkg.sha512"
+    },
+    "System.IO.Ports/4.4.0-preview2-25405-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gDxfMo8Kg97h8AIzjez7M+u39Uf2PpWXwObRpaJWdM1DlAPdWftA8jFHvr3fhKL93fEABUXmNMjoEzkLftbf8Q==",
+      "path": "system.io.ports/4.4.0-preview2-25405-01",
+      "hashPath": "system.io.ports.4.4.0-preview2-25405-01.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.4.0-preview2-25405-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B0O8OrZ2XdM2NgL4lciwKYIylITRkinTy2QfJRwBULzQNLtJaKjYfvsyJDC/+VV7yTQGHWAjGSyu9yji/1ElqA==",
+      "path": "system.security.accesscontrol/4.4.0-preview2-25405-01",
+      "hashPath": "system.security.accesscontrol.4.4.0-preview2-25405-01.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.4.0-preview2-25405-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yKFdEsEfDSahLOZ7fB79cDigVCdYX8kOJfRVevqs4HKMMMIVyP6H3a6MFUATaHtZ7iG0W6WSC/GmZW5eO/aAvw==",
+      "path": "system.security.principal.windows/4.4.0-preview2-25405-01",
+      "hashPath": "system.security.principal.windows.4.4.0-preview2-25405-01.nupkg.sha512"
+    }
+  }
+}

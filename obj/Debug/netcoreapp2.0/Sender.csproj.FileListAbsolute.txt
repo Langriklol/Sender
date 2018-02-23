@@ -1,0 +1,10 @@
+/home/lango/Documents/SOČ/proj/Sender/bin/Debug/netcoreapp2.0/Sender.deps.json
+/home/lango/Documents/SOČ/proj/Sender/bin/Debug/netcoreapp2.0/Sender.runtimeconfig.json
+/home/lango/Documents/SOČ/proj/Sender/bin/Debug/netcoreapp2.0/Sender.runtimeconfig.dev.json
+/home/lango/Documents/SOČ/proj/Sender/bin/Debug/netcoreapp2.0/Sender.dll
+/home/lango/Documents/SOČ/proj/Sender/bin/Debug/netcoreapp2.0/Sender.pdb
+/home/lango/Documents/SOČ/proj/Sender/obj/Debug/netcoreapp2.0/Sender.csproj.CoreCompileInputs.cache
+/home/lango/Documents/SOČ/proj/Sender/obj/Debug/netcoreapp2.0/Sender.AssemblyInfoInputs.cache
+/home/lango/Documents/SOČ/proj/Sender/obj/Debug/netcoreapp2.0/Sender.AssemblyInfo.cs
+/home/lango/Documents/SOČ/proj/Sender/obj/Debug/netcoreapp2.0/Sender.dll
+/home/lango/Documents/SOČ/proj/Sender/obj/Debug/netcoreapp2.0/Sender.pdb
