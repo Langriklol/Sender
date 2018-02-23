@@ -17,42 +17,49 @@ namespace Sender{
         {
             dynamic json = JsonConvert.DeserializeObject(File.ReadAllText(path));
             //json = json.tracks;
+            float BPM = float.Parse(json.header.bpm.ToString());
             this.json = json.tracks[1].notes.ToString();
             JArray toneArray = JArray.Parse(this.json);
+            string currentName = "";
+            float currentDuration = 0.0F;
             foreach(JObject jObject in toneArray.Children<JObject>())
             {
-                string currentName = "";
-                string currentDuration = "";
+                if(jObject != null){
                 foreach(JProperty toneProperty in jObject.Properties())
                 {
                     if(toneProperty.Name.Equals("name")){
                         currentName = (string)toneProperty.Value;
                     }else if(toneProperty.Name.Equals("duration"))
                     {
-                        currentDuration = (string)toneProperty.Value;
-                    }else if(currentDuration != "" && currentName != ""){
-                        this.tones.Add(new Note(currentName, float.Parse(currentDuration)));
+                        currentDuration = float.Parse((string)toneProperty.Value);
+                        //Let's do some Math!
+                        currentDuration = 60/BPM*currentDuration*1000;
+                    }else if(currentDuration != 0.0F && currentName != ""){
+                        this.tones.Add(new Note(currentName, currentDuration));
                         currentName = "";
-                        currentDuration = "";
+                        currentDuration = 0.0F;
                     }
                 }
+            }
             }
             return this.tones;
         }
 
         public string getJson()
         {
-           string output = "";
+           string output = "{";
             foreach(Note note in this.tones)
             {
-                output += String.Format("{\n" + "Name: {0} \n Frequency: {1} \n Duration: {2} \n" + "}",
-                 note.getName(), note.getFrequency(), note.getDuration());
+                output += String.Format(
+                    "[\n" + " Name: {0} \n Frequency: {1} \n Duration: {2} ms\n" + "],\n",
+                    note.getName(),
+                    note.getFrequency(),
+                    note.getDuration()
+                   );
             }
+            output += "}";
             return output;
         }
-
-        public System.Type getJsonType() => this.json.GetType();
-
-        //public List<Note> getTones() => this.tones;
+        public List<Note> getTones() => this.tones;
     }
 }
