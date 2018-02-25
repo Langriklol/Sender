@@ -32,9 +32,8 @@ namespace Sender
                     note.getDuration()
                 )
             );
-                Task.Delay((int)Math.Round(note.getDuration())).Wait();
+                Task.Delay((int)Math.Round(note.getDuration())).Wait(); //Waiting when tone is playing - a bit messy
             }
-            //Console.WriteLine(parser.getJson());
         }
     }
 }
