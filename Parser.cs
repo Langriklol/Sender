@@ -19,8 +19,6 @@ namespace Sender{
             float BPM = float.Parse(json.header.bpm.ToString());
             this.json = json.tracks[1].notes.ToString();
             JArray toneArray = JArray.Parse(this.json);
-            
-            List<Note> helper = new List<Note>();
 
             string currentName = "";
             float currentDuration = 0.0F;
