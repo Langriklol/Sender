@@ -50,7 +50,7 @@ namespace Sender{
                             }
                         }else if(currentName != "" && timeElapsed != 0 && currentDuration != 0)
                         {
-                            Note note = new Note(currentName, currentDuration*1000, startNoteTime);
+                            Note note = new Note(currentName, 60/BPM*currentDuration*1000, startNoteTime);
                             if(note.getTime() == timeElapsed)
                             {
                                 this.tones.Add(note);
@@ -58,7 +58,7 @@ namespace Sender{
                             }else
                             {
                                 float difference = note.getTime() - timeElapsed;
-                                this.tones.Add(new Note("P1", Math.Abs(difference*1000)));
+                                this.tones.Add(new Note("P1", Math.Abs(60/BPM*difference*1000)));
                                 this.tones.Add(note);
                                 timeElapsed += difference;
                             }
