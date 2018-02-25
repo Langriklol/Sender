@@ -16,7 +16,6 @@ namespace Sender{
         public List<Note> Parse(string path)
         {
             dynamic json = JsonConvert.DeserializeObject(File.ReadAllText(path));
-            //json = json.tracks;
             float BPM = float.Parse(json.header.bpm.ToString());
             this.json = json.tracks[1].notes.ToString();
             JArray toneArray = JArray.Parse(this.json);
