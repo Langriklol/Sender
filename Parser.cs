@@ -20,27 +20,54 @@ namespace Sender{
             float BPM = float.Parse(json.header.bpm.ToString());
             this.json = json.tracks[1].notes.ToString();
             JArray toneArray = JArray.Parse(this.json);
+            
+            List<Note> helper = new List<Note>();
+
             string currentName = "";
             float currentDuration = 0.0F;
+            float timeElapsed = 0.0F;
+            float startNoteTime = 0.0F;
+            bool elapsed = false;
+
             foreach(JObject jObject in toneArray.Children<JObject>())
             {
                 if(jObject != null){
-                foreach(JProperty toneProperty in jObject.Properties())
-                {
-                    if(toneProperty.Name.Equals("name")){
-                        currentName = (string)toneProperty.Value;
-                    }else if(toneProperty.Name.Equals("duration"))
+                    foreach(JProperty toneProperty in jObject.Properties())
                     {
-                        currentDuration = float.Parse((string)toneProperty.Value);
-                        //Let's do some Math!
-                        currentDuration = 60/BPM*currentDuration*1000;
-                    }else if(currentDuration != 0.0F && currentName != ""){
-                        this.tones.Add(new Note(currentName, currentDuration));
-                        currentName = "";
-                        currentDuration = 0.0F;
+                        if(toneProperty.Name.Equals("name"))
+                        {
+                            currentName = (string) toneProperty.Value;
+                        }else if(toneProperty.Name.Equals("duration"))
+                        {
+                            currentDuration = float.Parse((string)toneProperty.Value);
+                        }else if(toneProperty.Name.Equals("time"))
+                        {
+                            startNoteTime = float.Parse((string)toneProperty.Value);
+                            if(!elapsed)
+                            {
+                                elapsed = false;
+                                timeElapsed = startNoteTime;
+                            }
+                        }else if(currentName != "" && timeElapsed != 0 && currentDuration != 0)
+                        {
+                            Note note = new Note(currentName, currentDuration*1000, startNoteTime);
+                            if(note.getTime() == timeElapsed)
+                            {
+                                this.tones.Add(note);
+                                timeElapsed += currentDuration;
+                            }else
+                            {
+                                float difference = note.getTime() - timeElapsed;
+                                this.tones.Add(new Note("P1", Math.Abs(difference*1000)));
+                                this.tones.Add(note);
+                                timeElapsed += difference;
+                            }
+                        }else
+                        {
+                            continue;
+                        }
                     }
                 }
-            }
             }
             return this.tones;
         }
@@ -51,7 +78,7 @@ namespace Sender{
             foreach(Note note in this.tones)
             {
                 output += String.Format(
-                    "[\n" + " Name: {0} \n Frequency: {1} \n Duration: {2} ms\n" + "],\n",
+                    "[\n" + " Name: {0} \n Frequency: {1} Hz\n Duration: {2} ms\n" + "],\n",
                     note.getName(),
                     note.getFrequency(),
                     note.getDuration()

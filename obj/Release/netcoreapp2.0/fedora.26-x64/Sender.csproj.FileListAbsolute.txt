@@ -1,0 +1,13 @@
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/libhostpolicy.so
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/libhostfxr.so
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/Sender
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/Sender.deps.json
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/Sender.runtimeconfig.json
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/Sender.runtimeconfig.dev.json
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/Sender.dll
+/home/lango/Documents/SOČ/proj/Sender/bin/Release/netcoreapp2.0/fedora.26-x64/Sender.pdb
+/home/lango/Documents/SOČ/proj/Sender/obj/Release/netcoreapp2.0/fedora.26-x64/Sender.csproj.CoreCompileInputs.cache
+/home/lango/Documents/SOČ/proj/Sender/obj/Release/netcoreapp2.0/fedora.26-x64/Sender.AssemblyInfoInputs.cache
+/home/lango/Documents/SOČ/proj/Sender/obj/Release/netcoreapp2.0/fedora.26-x64/Sender.AssemblyInfo.cs
+/home/lango/Documents/SOČ/proj/Sender/obj/Release/netcoreapp2.0/fedora.26-x64/Sender.dll
+/home/lango/Documents/SOČ/proj/Sender/obj/Release/netcoreapp2.0/fedora.26-x64/Sender.pdb

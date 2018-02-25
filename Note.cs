@@ -5,11 +5,20 @@ namespace Sender{
         private float frequency;
         private float duration;
         private string name;
-        public Note(string name, float duration)
+        private float startTime;
+        public Note(string name, float duration, float startTime)
         {
             this.name = name;
             this.duration = duration;
             this.frequency = this.calculateFrequency(name);
+            this.startTime = startTime;
+        }
+
+        public Note(string name, float duration)
+        {
+            this.name = name;
+            this.frequency = 0;
+            this.duration = duration;
         }
 
         private float calculateFrequency(string name)
@@ -86,5 +95,7 @@ namespace Sender{
         public float getFrequency() => this.frequency;
 
         public float getDuration() => this.duration;
+
+        public float getTime() => this.startTime;
     }
 }

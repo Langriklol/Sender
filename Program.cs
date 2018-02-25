@@ -20,7 +20,7 @@ namespace Sender
             
             Parser parser = new Parser();
             parser.Parse(filePath);
-
+            
             foreach(Note note in parser.getTones())
             {
                 //sender.Send(note); - Another one useless thing just because Windows is junk
@@ -34,7 +34,7 @@ namespace Sender
             );
                 Task.Delay((int)Math.Round(note.getDuration())).Wait();
             }
-
+            //Console.WriteLine(parser.getJson());
         }
     }
 }
